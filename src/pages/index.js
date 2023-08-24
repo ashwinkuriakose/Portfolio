@@ -2,8 +2,11 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/AnimatedText";
+import HireMe from "@/components/HireMe";
 import Link from "next/link";
+import Image from "next/image";
 import { LinkArrow } from "@/components/Icons";
+import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg"
 
 export default function Home() {
   return (
@@ -16,8 +19,8 @@ export default function Home() {
         <Layout className="pt-0">
           <div class="flex items-center justify-between w-full">
             <div className="w-1/2">
-              <img
-                src="images/profile/developer-pic-1.png"
+              <Image
+                src={profilePic}
                 alt="CodeBucks"
                 className="w-full h-auto"
               />
@@ -54,6 +57,12 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+
+        <HireMe />
+
+        <div className="absolute right-8 bottom-8 inline-block w-24">
+          <Image src={lightBulb} alt="ashwin" className="relative h-auto w-full"></Image>
+        </div>
       </main>
     </>
   );
